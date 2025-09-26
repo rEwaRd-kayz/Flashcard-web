@@ -1,0 +1,93 @@
+/* general layout */
+body {
+  font-family: Arial, sans-serif;
+    background: #f4f4f9;
+      display: flex;
+        justify-content: center;
+          padding: 20px;
+            min-height: 100vh;
+              box-sizing: border-box;
+              }
+
+              .container {
+                width: 400px;
+                  max-width: 100%;
+                    background: #fff;
+                      padding: 20px;
+                        border-radius: 10px;
+                          box-shadow: 0 0 10px rgba(0,0,0,0.12);
+                          }
+
+                          h1 { text-align: center; color: #333; margin: 0 0 10px 0; }
+
+                          .add-card input, .add-card select, .filter select {
+                            width: 100%;
+                              margin: 5px 0;
+                                padding: 10px;
+                                  border-radius: 5px;
+                                    border: 1px solid #ccc;
+                                      box-sizing: border-box;
+                                      }
+
+                                      .add-card button {
+                                        width: 100%;
+                                          padding: 10px;
+                                            margin-top: 5px;
+                                              border: none;
+                                                border-radius: 5px;
+                                                  background: #4caf50;
+                                                    color: white;
+                                                      font-size: 16px;
+                                                        cursor: pointer;
+                                                        }
+
+                                                        .add-card button:hover { background: #45a049; }
+
+                                                        /* flashcards */
+                                                        .flashcard {
+                                                          border-radius: 8px;
+                                                            padding: 15px;
+                                                              margin: 10px 0;
+                                                                cursor: pointer;
+                                                                  color: #fff;
+                                                                    position: relative;
+                                                                      transition: transform 0.3s ease, box-shadow 0.2s ease;
+                                                                        transform-style: preserve-3d;
+                                                                          perspective: 1000px;
+                                                                            user-select: none;
+                                                                            }
+
+                                                                            .flashcard p { margin: 0; }
+
+                                                                            /* subject color classes (safe names) */
+                                                                            .flashcard.maths { background: #007bff; }           /* blue */
+                                                                            .flashcard.accounts { background: #28a745; }        /* green */
+                                                                            .flashcard.computer-science { background: #00bfff; }/* light blue */
+
+                                                                            /* small hover */
+                                                                            .flashcard:hover { transform: translateY(-4px); box-shadow: 0 6px 18px rgba(0,0,0,0.12); }
+
+                                                                            /* delete button */
+                                                                            .flashcard .delete-btn {
+                                                                              position: absolute;
+                                                                                top: 6px;
+                                                                                  right: 6px;
+                                                                                    background: #ff4d4d;
+                                                                                      border: none;
+                                                                                        color: white;
+                                                                                          border-radius: 3px;
+                                                                                            padding: 2px 7px;
+                                                                                              cursor: pointer;
+                                                                                                font-size: 12px;
+                                                                                                }
+                                                                                                .flashcard .delete-btn:hover { background: #e60000; }
+
+                                                                                                /* "flipped" visual flag (we toggle content via JS, keep transform subtle) */
+                                                                                                .flashcard.flipped { transform: translateY(-4px) scale(1.01); }
+
+                                                                                                footer {
+                                                                                                  text-align: center;
+                                                                                                    margin-top: 15px;
+                                                                                                      color: #555;
+                                                                                                        font-size: 14px;
+                                                                                                        }
